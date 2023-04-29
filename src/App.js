@@ -3,16 +3,13 @@ import "./App.css";
 
 
 function App(){
-    const [value,setValue] = useState("hello world")
+    const [value,setValue] = useState("")
 
-    function change(){
-        setValue( value === "hello world"   ? "hello" : "hello world");
-     }
-    
+   
     return (
     <div className="css">
     <div className="css1">
-      <button onClick={change}> click here</button>
+     <input type ="text" value = {value} onChange = {(e)=>setValue(e.target.value)} />
        <h1>{value}</h1>
        </div>
     </div>
